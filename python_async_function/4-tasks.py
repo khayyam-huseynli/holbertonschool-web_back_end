@@ -27,12 +27,13 @@ asyncio.run(main())
 """
 
 import asyncio
+from typing import List
 
 # Importing task_wait_random from 3-tasks
 task_wait_random = __import__('3-tasks').task_wait_random
 
 
-async def task_wait_n(n: int, max_delay: int) -> list[float]:
+async def task_wait_n(n: int, max_delay: int) -> List[float]:
     """
     Runs multiple `wait_random` tasks concurrently and returns
     the delays in the order they complete.
